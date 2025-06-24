@@ -26,7 +26,16 @@
 import { ref } from 'vue'
 import * as XLSX from 'xlsx'
 
-const tableData = ref([])
+const tableData = ref([{
+    "Número do CT-e": "",
+    "Data de Emissão": "",
+    "Emitente": "",
+    "Remetente": "",
+    "Destinatário": "",
+    "Valor Total": "",
+    "Tipo de produto": ""
+  }
+])
 
 const handleFileUpload = async (event) => {
   const files = event.target.files
@@ -95,12 +104,12 @@ const downloadExcel = () => {
   font-weight: lighter;
   border-radius: 10px;
 }
-.cte-table th {
+/* .cte-table th {
   padding: 8px;
   border: 1px solid;
   font-weight: lighter;
   border-radius: 10px;
-}
+} */
 
 .button-download {
   padding: 10px 20px;
